@@ -21,4 +21,9 @@ public class ProductoService {
     public Optional<Producto> obtenerPorId(Long id) {
         return productoRepository.findById(id);
     }
+
+    public Producto save(Producto producto) {
+        // Asegúrate de usar el nombre correcto de tu repositorio (aquí uso productoRepository como ejemplo)
+        return productoRepository.save(producto);
+    }
 }
