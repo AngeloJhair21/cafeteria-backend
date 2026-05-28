@@ -22,8 +22,8 @@ public class ProductoService {
         return productoRepository.findById(id);
     }
 
-    public Producto save(Producto producto) {
-        // Asegúrate de usar el nombre correcto de tu repositorio (aquí uso productoRepository como ejemplo)
+    public Producto guardar(Producto producto) {
+
         return productoRepository.save(producto);
     }
 }

@@ -26,9 +26,8 @@ public class ProductoController {
         return productoService.obtenerPorId(id);
     }
 
-
     @PostMapping
     public Producto registrarProducto(@RequestBody Producto producto) {
-        return productoService.save(producto);
+        return productoService.guardar(producto);
     }
 }
