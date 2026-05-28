@@ -25,4 +25,10 @@ public class ProductoController {
     public Optional<Producto> obtenerPorId(@PathVariable Long id) {
         return productoService.obtenerPorId(id);
     }
+
+
+    @PostMapping
+    public Producto registrarProducto(@RequestBody Producto producto) {
+        return productoService.save(producto);
+    }
 }
