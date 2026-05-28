@@ -21,4 +21,8 @@ public class CursoService {
     public Optional<Curso> obtenerPorId(Long id) {
         return cursoRepository.findById(id);
     }
+
+    public Curso guardar(Curso curso) {
+        return cursoRepository.save(curso);
+    }
 }

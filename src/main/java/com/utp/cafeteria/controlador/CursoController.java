@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/cursos")
@@ -21,8 +20,8 @@ public class CursoController {
         return cursoService.obtenerTodos();
     }
 
-    @GetMapping("/{id}")
-    public Optional<Curso> obtenerPorId(@PathVariable Long id) {
-        return cursoService.obtenerPorId(id);
+    @PostMapping
+    public Curso registrarCurso(@RequestBody Curso curso) {
+        return cursoService.guardar(curso);
     }
 }
